@@ -44,6 +44,9 @@
     [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(scrollingTimer) userInfo:nil repeats:YES];
     
     [self setupNavigationBar];
+    
+    NSString *strdemo=@"dddd";
+    //new code
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
