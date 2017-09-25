@@ -32,19 +32,19 @@
         [_scrollview addSubview:viewTemp];
     }
     
-    [_scrollview setContentSize:CGSizeMake(1280,500)];
-    _scrollview.delegate=self;
-    _scrollview.pagingEnabled=YES;
-    _pagecontroller.backgroundColor=[UIColor redColor];
-   // _pagecontroller.tintColor=[UIColor blackColor];
-    _pagecontroller.pageIndicatorTintColor = [UIColor blackColor];
-    _pagecontroller.currentPageIndicatorTintColor = [UIColor whiteColor];
-    _pagecontroller.numberOfPages=ArrayColors.count;
-    
-    [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(scrollingTimer) userInfo:nil repeats:YES];
-    
-    [self setupNavigationBar];
-   
+//    [_scrollview setContentSize:CGSizeMake(1280,500)];
+//    _scrollview.delegate=self;
+//    _scrollview.pagingEnabled=YES;
+//    _pagecontroller.backgroundColor=[UIColor redColor];
+//   // _pagecontroller.tintColor=[UIColor blackColor];
+//    _pagecontroller.pageIndicatorTintColor = [UIColor blackColor];
+//    _pagecontroller.currentPageIndicatorTintColor = [UIColor whiteColor];
+//    _pagecontroller.numberOfPages=ArrayColors.count;
+//    
+//    [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(scrollingTimer) userInfo:nil repeats:YES];
+//    
+//    [self setupNavigationBar];
+//   
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
