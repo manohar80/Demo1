@@ -47,43 +47,43 @@
 //   
 }
 
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
-{
-    CGFloat pageWidth = scrollView.frame.size.width;
-    float fractionalPage = scrollView.contentOffset.x / pageWidth;
-    NSInteger page = lround(fractionalPage);
-    [_pagecontroller setCurrentPage:page];
-}
-
-- (void)scrollingTimer
-{
-    CGFloat contentOffset = _scrollview.contentOffset.x;
-    int nextPage = (int)(contentOffset/_scrollview.frame.size.width) + 1 ;
-    
-    if( nextPage!=[ArrayColors count])
-    {
-        [_scrollview scrollRectToVisible:CGRectMake(nextPage*_scrollview.frame.size.width, 0, _scrollview.frame.size.width, _scrollview.frame.size.height) animated:YES];
-        _pagecontroller.currentPage=nextPage;
-    }
-    else
-    {
-        [_scrollview scrollRectToVisible:CGRectMake(0, 0, _scrollview.frame.size.width, _scrollview.frame.size.height) animated:YES];
-        _pagecontroller.currentPage=0;
-    }
-}
-
--(void)setupNavigationBar
-{
-    self.title = @"Close";
-    UIBarButtonItem *NewBarButtonItem = [[UIBarButtonItem alloc]
-                                         initWithImage:[UIImage imageNamed:@"NavBar-Close"]
-                                         style:UIBarButtonItemStylePlain
-                                         target:self
-                                         action:@selector(closeMethod:)];
-    self.navigationItem.leftBarButtonItem = NewBarButtonItem;
-    
-}
-
+//- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+//{
+//    CGFloat pageWidth = scrollView.frame.size.width;
+//    float fractionalPage = scrollView.contentOffset.x / pageWidth;
+//    NSInteger page = lround(fractionalPage);
+//    [_pagecontroller setCurrentPage:page];
+//}
+//
+//- (void)scrollingTimer
+//{
+//    CGFloat contentOffset = _scrollview.contentOffset.x;
+//    int nextPage = (int)(contentOffset/_scrollview.frame.size.width) + 1 ;
+//    
+//    if( nextPage!=[ArrayColors count])
+//    {
+//        [_scrollview scrollRectToVisible:CGRectMake(nextPage*_scrollview.frame.size.width, 0, _scrollview.frame.size.width, _scrollview.frame.size.height) animated:YES];
+//        _pagecontroller.currentPage=nextPage;
+//    }
+//    else
+//    {
+//        [_scrollview scrollRectToVisible:CGRectMake(0, 0, _scrollview.frame.size.width, _scrollview.frame.size.height) animated:YES];
+//        _pagecontroller.currentPage=0;
+//    }
+//}
+//
+//-(void)setupNavigationBar
+//{
+//    self.title = @"Close";
+//    UIBarButtonItem *NewBarButtonItem = [[UIBarButtonItem alloc]
+//                                         initWithImage:[UIImage imageNamed:@"NavBar-Close"]
+//                                         style:UIBarButtonItemStylePlain
+//                                         target:self
+//                                         action:@selector(closeMethod:)];
+//    self.navigationItem.leftBarButtonItem = NewBarButtonItem;
+//    
+//}
+//
 
 
 - (void)closeMethod:(id)sender
